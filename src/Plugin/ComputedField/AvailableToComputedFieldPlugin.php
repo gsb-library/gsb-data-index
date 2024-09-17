@@ -25,7 +25,7 @@ class AvailableToComputedFieldPlugin extends ComputedFieldBase {
   /**
    * {@inheritdoc}
    */
-  public function singleComputeValue(EntityInterface $host_entity, ComputedFieldDefinitionWithValuePluginInterface $computed_field_definition): string {
+  public function singleComputeValue(EntityInterface $host_entity, ComputedFieldDefinitionWithValuePluginInterface $computed_field_definition): mixed {
     // Returns the value for a computed field.
     
     
