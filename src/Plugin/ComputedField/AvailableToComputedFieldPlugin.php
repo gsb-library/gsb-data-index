@@ -7,22 +7,25 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\computed_field\Field\ComputedFieldDefinitionWithValuePluginInterface;
 use Drupal\computed_field\Plugin\ComputedField\ComputedFieldBase;
+use Drupal\computed_field\Plugin\ComputedField\SingleValueTrait;
 
 /**
  * TODO: class docs.
  *
- * @AvailableToComputedField(
- *   id = "gsb_data_index_available_to_computed_field_plugin",
+ * @ComputedField(
+ *   id = "gsb_data_index_available_to_field",
  *   label = @Translation("Available To Computed Field Plugin"),
  *   field_type = "string",
  * )
  */
 class AvailableToComputedFieldPlugin extends ComputedFieldBase {
 
+  use SingleValueTrait;
+  
   /**
    * {@inheritdoc}
    */
-  public function computeValue(EntityInterface $host_entity, ComputedFieldDefinitionWithValuePluginInterface $computed_field_definition): array {
+  public function singleComputeValue(EntityInterface $host_entity, ComputedFieldDefinitionWithValuePluginInterface $computed_field_definition): string {
     // Returns the value for a computed field.
     
     
