@@ -1,0 +1,11 @@
+{
+    "name": "gsb-library/gsb_data_index",
+    "description": "Custom module for the gsb data index",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0",
+        "drupal/core": "^9.5 || ^10 || ^11"
+    }
+}
